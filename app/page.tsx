@@ -1,23 +1,23 @@
-'use client'
+'use client';
 
-import { useState, useEffect } from 'react'
-import { ThemeProvider } from 'next-themes'
-import ReserVapos from '@/components/ReserVapos'
+import { useState, useEffect } from 'react';
+import { ThemeProvider } from 'next-themes';
+import ReserVapos from '@/components/ReserVapos';
 
 export default function Home() {
-  const [mounted, setMounted] = useState(false)
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true)
-  }, [])
+    setMounted(true);
+  }, []);
 
   if (!mounted) {
-    return null
+    return null;
   }
 
   return (
-      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-        <ReserVapos />
-      </ThemeProvider>
-  )
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <ReserVapos />
+    </ThemeProvider>
+  );
 }
